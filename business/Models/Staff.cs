@@ -5,7 +5,7 @@ using System.Web;
 
 namespace business.Models
 {
-    public class Home
+    public class Staff
     {
     }
 }
