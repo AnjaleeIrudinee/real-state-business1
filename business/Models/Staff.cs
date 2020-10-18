@@ -10,13 +10,13 @@ namespace business.Models
     public class Staff
     {
         [Key]
-        public int StaffNo { get; set; }
+        public string StaffNo { get; set; }
         public string Fname { get; set; }
         public string Lname { get; set; }
         public string Position { get; set; }
-        public string DOB { get; set; }
+        public DateTime DOB { get; set; }
         public int Salary { get; set; }
         [ForeignKey("Branch")]
-        public int RefBranchNo { get; set; }
+        public string RefBranchNo { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace business.Models
     public class Branch
     {
         [Key]
-        public int BranchNo { get; set; }
+        public string BranchNo { get; set; }
         public string Street { get; set; }
         public string City { get; set; }
         public string PostCode { get; set; }

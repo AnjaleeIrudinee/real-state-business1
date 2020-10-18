@@ -9,7 +9,7 @@ namespace business.Models
     public class Owner
     {
         [Key]
-        public int OwnerNo { get; set; }
+        public string OwnerNo { get; set; }
         public string OwnerFname { get; set; }
         public string OwnerLname { get; set; }
         public string Address { get; set; }
