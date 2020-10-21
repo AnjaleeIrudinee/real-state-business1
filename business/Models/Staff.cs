@@ -18,5 +18,7 @@ namespace business.Models
         public int Salary { get; set; }
         [ForeignKey("Branch")]
         public string RefBranchNo { get; set; }
+       
+        public Branch Branch { get; set; }
     }
 }

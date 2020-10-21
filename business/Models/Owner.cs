@@ -14,5 +14,7 @@ namespace business.Models
         public string OwnerLname { get; set; }
         public string Address { get; set; }
         public int TelNo { get; set; }
+       
+        public List<Staff> Staffs { get; set; }
     }
 }

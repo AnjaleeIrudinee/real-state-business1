@@ -16,11 +16,15 @@ namespace business.Models
         public string Ptype { get; set; }
         public int Rooms { get; set; }
         [ForeignKey("Owner")]
-        public string RefOwnerNo { get; set; }
+        public string OwnerNo_Ref { get; set; }
         [ForeignKey("Staff")]
-        public string RefStaffNo { get; set; }
+       public string StaffNo_Ref { get; set; }
         [ForeignKey("Branch")]
-        public string RefBranchNo { get; set; }
+        public string BranchNo_Ref { get; set; }
         public int rent1 { get; set; }
+       
+       public Owner Owner { get; set; }
+        public Staff Staff { get; set; }
+        public Branch Branch { get; set; }
     }
 }
