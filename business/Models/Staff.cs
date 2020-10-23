@@ -7,6 +7,7 @@ using System.Web;
 
 namespace business.Models
 {
+    [Table("Staff_tbl")]
     public class Staff
     {
         [Key]
@@ -14,10 +15,13 @@ namespace business.Models
         public string Fname { get; set; }
         public string Lname { get; set; }
         public string Position { get; set; }
+        [Column(TypeName="Date")]
+        [DataType(DataType.Date)]
         public DateTime DOB { get; set; }
+        [DataType(DataType.Currency)]
         public int Salary { get; set; }
         [ForeignKey("Branch")]
-        public string RefBranchNo { get; set; }
+        public string BranchNo_Ref { get; set; }
        
         public Branch Branch { get; set; }
     }

@@ -8,9 +8,9 @@ namespace business.Models
 {
     public class BusinessContext:DbContext
     {
-        public DbSet<Owner> Owner_tbl { get; set; }
-        public DbSet<Branch> Branch_tbl { get; set; }
-        public DbSet<Staff> Staff_tbl { get; set; }
-        public DbSet<Rent> Rent_tbl { get; set; }
+        public DbSet<Owner> Owners { get; set; }
+        public DbSet<Branch> Branchs { get; set; }
+        public DbSet<Staff> Staffs { get; set; }
+        public DbSet<Rent> Rents { get; set; }
     }
 }

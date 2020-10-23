@@ -1,0 +1,41 @@
+﻿@model List<business.Models.Branch>
+@using business.Models
+
+@{
+    Layout=null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IndexB</title>
+</head>
+
+    <body>
+        <div>
+            <h1>Branch</h1>
+            <table border="1">
+                
+                    <tr>
+                        <td>Branch No</td>
+                        <td>Street</td>
+                        <td>City</td>
+                        <td>Post</td>
+                    </tr>
+                @foreach (Branch branch in Model)
+                {
+                    <tr>
+                        <td>@branch.BranchNo</td>
+                        <td>@branch.Street</td>
+                        <td>@branch.City</td>
+                        <td>@branch.PostCode</td>
+                    </tr>
+                }
+                </table>
+        </div>
+</body>
+
+</html>
+
+

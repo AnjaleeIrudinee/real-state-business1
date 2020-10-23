@@ -1,0 +1,51 @@
+﻿@model List<business.Models.Staff>
+@using business.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IndexS</title>
+</head>
+
+<body>
+    <div>
+        <h1>Staff</h1>
+        <table border="1">
+
+            <tr>
+                <td>Staff No</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Position</td>
+                <td>Date Of Birth</td>
+                <td>Salary</td>
+                <td>Branch No</td>
+
+
+            </tr>
+            @foreach (Staff staff in Model)
+            {
+                <tr>
+                    <td>@staff.StaffNo</td>
+                    <td>@staff.Fname</td>
+                    <td>@staff.Lname</td>
+                    <td>@staff.Position</td>
+                    <td>@staff.DOB</td>
+                    <td>@staff.Salary</td>
+                    <td>@staff.BranchNo_Ref</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+
+</html>
+
+
+
+

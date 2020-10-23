@@ -7,12 +7,13 @@ using System.Web;
 
 namespace business.Models
 {
+    [Table("Rent_tbl")]
     public class Rent
     {
         [Key]
         public string PropertyNo { get; set; }
         public string PropertyStreet { get; set; }
-        public string Street { get; set; }
+        public string City { get; set; }
         public string Ptype { get; set; }
         public int Rooms { get; set; }
         [ForeignKey("Owner")]

@@ -1,0 +1,44 @@
+﻿@model List<business.Models.Owner >
+@using business.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IndexO</title>
+</head>
+
+<body>
+    <div>
+        <h1>Owner</h1>
+        <table border="1">
+
+            <tr>
+                <td>Owner No</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Address</td>
+                <td>Telephone NO</td>
+
+            </tr>
+            @foreach (Owner owner in Model)
+            {
+                <tr>
+                    <td>@owner.OwnerNo</td>
+                    <td>@owner.OwnerFname</td>
+                    <td>@owner.OwnerLname</td>
+                    <td>@owner.Address</td>
+                    <td>@owner.TelNo</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+
+</html>
+
+
