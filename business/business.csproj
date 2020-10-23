@@ -125,7 +125,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BranchController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OwnerController.cs" />
+    <Compile Include="Controllers\RentController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -167,6 +171,7 @@
     <Content Include="Views\Home\IndexO.cshtml" />
     <Content Include="Views\Home\IndexR.cshtml" />
     <Content Include="Views\Home\IndexS.cshtml" />
+    <Content Include="Views\Branch\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -174,7 +179,11 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Owner\" />
+    <Folder Include="Views\Rent\" />
+    <Folder Include="Views\Staff\" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202010211728114_v1.resx">
       <DependentUpon>202010211728114_v1.cs</DependentUpon>

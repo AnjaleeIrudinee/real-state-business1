@@ -1,0 +1,29 @@
+﻿@model List<business.Models.Branch>
+@using business.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    <div>
+        <h1>Branchs</h1>
+        @foreach (Branch branch in Model)
+        {
+                @Html.ActionLink(branch.BranchNo, "Staff_in_Branch", "Home", new { @branchNo = branch.BranchNo }, null);
+                <br>
+        }
+
+    </div>
+</body>
+
+</html>
+
+
