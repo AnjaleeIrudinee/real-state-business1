@@ -28,6 +28,40 @@ namespace business.Controllers
             businessContext.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        public ActionResult Details(string id)
+        {
+            Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            return View(branch);
+        }
+        public ActionResult EditDetails(string id)
+        {
+            Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            ViewBag.BranchDetails = new SelectList(businessContext.Branchs, "BranchNo", "BranchNo");
+            return View(branch);
+        }
+        [HttpPost]
+        public ActionResult Edit(string id1,Branch updateBranch)
+        {
+            Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id1);
+            branch.BranchNo = updateBranch.BranchNo;
+            branch.Street = updateBranch.Street;
+            branch.City = updateBranch.City;
+            branch.PostCode = updateBranch.PostCode;
+            businessContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Delete(string id)
+        {
+            Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            return View(branch);
+        }
+        [HttpPost,ActionName("Delete")]
+        public ActionResult DeleteBranch(string id2)
+        {
+            Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id2);
+            businessContext.Branchs.Remove(branch);
+            businessContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

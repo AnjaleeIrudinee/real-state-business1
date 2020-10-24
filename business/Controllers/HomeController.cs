@@ -31,5 +31,28 @@ namespace business.Controllers
             List<Staff> Staffs = businessContext.Staffs.ToList();
             return View(Staffs);
         }
+        public ActionResult Staff_in_Branch(string branchno)
+        {
+            List<Staff> staffs = businessContext.Staffs.Where(x => x.BranchNo_Ref == branchno).ToList();
+            return View(staffs);
+        }
+        public ActionResult StaffDetails(string id)
+        {
+            Staff staff1 = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            return View(staff1);
+
+        }
+        public ActionResult OwnerProp(string id1)
+        {
+            Owner owner1 = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id1);
+            return View(owner1);
+        }
+        public ActionResult PropertyDetails(string id2)
+        {
+            List<Rent> rent = businessContext.Rents.Where(x => x.OwnerNo_Ref == id2).ToList();
+            return View(rent);
+        }
+
+
     }
 }
