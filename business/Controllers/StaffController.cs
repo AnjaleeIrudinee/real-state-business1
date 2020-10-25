@@ -22,10 +22,10 @@ namespace business.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(Rent rent)
+        public ActionResult Create(Staff staff)
         {
             ViewBag.BranchDetails = businessContext.Branchs;
-            businessContext.Rents.Add(rent);
+            businessContext.Staffs.Add(staff);
             businessContext.SaveChanges();
             return RedirectToAction("Index");
         }

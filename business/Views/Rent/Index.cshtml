@@ -47,13 +47,14 @@
     @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Branch.Street)
+                @Html.DisplayFor(modelItem => item.PropertyNo)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerNo_Ref)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Owner.OwnerFname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Staff.Fname)
+                @Html.DisplayFor(modelItem => item.StaffNo_Ref)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PropertyStreet)

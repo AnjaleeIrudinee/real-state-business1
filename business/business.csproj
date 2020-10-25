@@ -145,6 +145,10 @@
     <Compile Include="Migrations\202010241549366_b2.Designer.cs">
       <DependentUpon>202010241549366_b2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010250627521_n1.cs" />
+    <Compile Include="Migrations\202010250627521_n1.Designer.cs">
+      <DependentUpon>202010250627521_n1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\BusinessContext.cs" />
@@ -199,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010241549366_b2.resx">
       <DependentUpon>202010241549366_b2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010250627521_n1.resx">
+      <DependentUpon>202010250627521_n1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

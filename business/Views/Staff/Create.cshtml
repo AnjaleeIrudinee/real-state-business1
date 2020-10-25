@@ -76,7 +76,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.BranchNo_Ref, "BranchNo_Ref", htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.DropDownList("BranchNo_Ref", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.DropDownListFor(model => model.BranchNo_Ref, new SelectList(ViewBag.BranchDetails,"BranchNo","BranchNo"),"select the branch")
                     @Html.ValidationMessageFor(model => model.BranchNo_Ref, "", new { @class = "text-danger" })
                 </div>
             </div>
