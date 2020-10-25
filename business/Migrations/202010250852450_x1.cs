@@ -3,7 +3,7 @@ namespace business.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class v9 : DbMigration
+    public partial class x1 : DbMigration
     {
         public override void Up()
         {

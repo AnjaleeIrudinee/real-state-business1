@@ -29,7 +29,7 @@ namespace business.Controllers
             businessContext.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult Deatails(string id)
+        public ActionResult Details(string id)
         {
             Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
             return View(staff);

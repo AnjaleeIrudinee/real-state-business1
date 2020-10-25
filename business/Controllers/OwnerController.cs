@@ -16,9 +16,9 @@ namespace business.Controllers
             List<Owner> Owners = businessContext.Owners.ToList();
             return View(Owners);
         }
-        public ActionResult OwnerDetails(string id)
+        public ActionResult Details(string id)
         {
-            Owner owners = businessContext.Owners.SingleOrDefault(x=>x.OwnerNo==id);
+            Owner owners = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id);
             return View(owners);
         }
         public ActionResult Create()
