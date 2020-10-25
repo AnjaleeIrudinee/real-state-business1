@@ -58,6 +58,7 @@ namespace business.Controllers
             rent.OwnerNo_Ref = updateRent.OwnerNo_Ref;
             rent.StaffNo_Ref = updateRent.StaffNo_Ref;
             rent.BranchNo_Ref = updateRent.BranchNo_Ref;
+            rent.rent1 = updateRent.rent1;
             businessContext.SaveChanges();
             return RedirectToAction("Index");
         }
