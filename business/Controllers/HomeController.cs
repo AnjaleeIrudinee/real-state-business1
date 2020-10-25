@@ -42,17 +42,31 @@ namespace business.Controllers
             return View(staff1);
 
         }
-        public ActionResult OwnerProp(string id1)
+        public ActionResult OwnerProp(string id)
         {
-            Owner owner1 = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id1);
+            Owner owner1 = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id);
             return View(owner1);
         }
-        public ActionResult PropertyDetails(string id2)
+        public ActionResult PropertyDetails(string id)
         {
-            List<Rent> rent = businessContext.Rents.Where(x => x.OwnerNo_Ref == id2).ToList();
+            List<Rent> rent = businessContext.Rents.Where(x => x.OwnerNo_Ref == id).ToList();
             return View(rent);
         }
-
+        public ActionResult PropertyC(string id)
+        {
+            List<Rent> rent = businessContext.Rents.Where(x => x.City == id).ToList();
+            return View(rent);
+        }
+        public ActionResult SPosition(string position)
+        {
+            List<Staff> staffs = businessContext.Staffs.Where(x => x.Position == position).ToList();
+            return View(staffs);
+        }
+        public ActionResult PropertyP(string id)
+        {
+            List<Rent> rent = businessContext.Rents.Where(x => x.BranchNo_Ref == id).ToList();
+            return View(rent);
+        }
 
     }
 }

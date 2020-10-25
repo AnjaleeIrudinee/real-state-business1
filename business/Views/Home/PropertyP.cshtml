@@ -1,0 +1,28 @@
+﻿@model List<business.Models.Rent>
+    @using business.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PropertyP</title>
+</head>
+<body>
+    <div> 
+        <h1>Numbers of properties</h1>
+        <table>
+            @foreach (Rent rent in Model)
+            {
+                <tr>
+                    <td>@rent.PropertyNo</td>
+                </tr>
+            }
+        </table>
+</div>
+</body>
+</html>

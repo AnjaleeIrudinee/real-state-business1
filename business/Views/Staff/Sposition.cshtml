@@ -1,0 +1,25 @@
+﻿@model List<business.Models.Staff>
+    @using business.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sposition</title>
+</head>
+<body>
+    <div> 
+        <h1>Staff Positions</h1>
+        @foreach(Staff staff in Model)
+        {
+            @Html.ActionLink(staff.Position, "SPosition", "Home", new { @position = staff.Position }, null);
+            <br />
+        }
+    </div>
+</body>
+</html>

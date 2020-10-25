@@ -175,6 +175,11 @@
     <Content Include="Views\Owner\Delete.cshtml" />
     <Content Include="Views\Rent\Edit.cshtml" />
     <Content Include="Views\Rent\Delete.cshtml" />
+    <Content Include="Views\Rent\PropertyC.cshtml" />
+    <Content Include="Views\Home\SPosition.cshtml" />
+    <Content Include="Views\Home\PropertyP.cshtml" />
+    <Content Include="Views\Rent\CountC.cshtml" />
+    <Content Include="Views\Staff\Sposition.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

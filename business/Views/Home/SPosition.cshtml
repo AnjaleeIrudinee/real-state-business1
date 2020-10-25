@@ -1,0 +1,32 @@
+﻿@model List<business.Models.Staff>
+    @using business.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SPosition</title>
+</head>
+<body>
+    <div>
+        <h1>Names of Staff</h1>
+        <table>
+            @foreach (Staff staff in Model)
+            {
+            <tr>
+                <td>@staff.Fname @staff.Lname</td>
+            </tr>
+            }
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

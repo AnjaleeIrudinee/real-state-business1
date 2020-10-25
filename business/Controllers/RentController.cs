@@ -74,5 +74,16 @@ namespace business.Controllers
             businessContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult PropertyC()
+        {
+            List<Rent> rent = businessContext.Rents.ToList();
+            return View(rent);
+        }
+        public ActionResult CountC(string branch)
+        {
+            List<Rent> rent = businessContext.Rents.ToList();
+            return View(rent);
+        }
     }
 }

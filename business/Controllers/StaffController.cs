@@ -68,6 +68,11 @@ namespace business.Controllers
             businessContext.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Sposition()
+        {
+            List<Staff> staff = businessContext.Staffs.ToList();
+            return View(staff);
+        }
 
     }
 }
