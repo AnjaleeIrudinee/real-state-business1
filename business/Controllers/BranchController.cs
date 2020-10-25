@@ -33,16 +33,16 @@ namespace business.Controllers
             Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id);
             return View(branch);
         }
-        public ActionResult EditDetails(string id)
+        public ActionResult Edit(string id)
         {
             Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id);
             ViewBag.BranchDetails = new SelectList(businessContext.Branchs, "BranchNo", "BranchNo");
             return View(branch);
         }
         [HttpPost]
-        public ActionResult Edit(string id1,Branch updateBranch)
+        public ActionResult Edit(string id,Branch updateBranch)
         {
-            Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id1);
+            Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id);
             branch.BranchNo = updateBranch.BranchNo;
             branch.Street = updateBranch.Street;
             branch.City = updateBranch.City;
@@ -56,9 +56,9 @@ namespace business.Controllers
             return View(branch);
         }
         [HttpPost,ActionName("Delete")]
-        public ActionResult DeleteBranch(string id2)
+        public ActionResult DeleteBranch(string id)
         {
-            Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id2);
+            Branch branch = businessContext.Branchs.SingleOrDefault(x => x.BranchNo == id);
             businessContext.Branchs.Remove(branch);
             businessContext.SaveChanges();
             return RedirectToAction("Index");

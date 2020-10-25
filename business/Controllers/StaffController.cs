@@ -61,9 +61,9 @@ namespace business.Controllers
             return View(staff);
         }
         [HttpPost,ActionName("Delete")]
-        public ActionResult DeleteStaffs(string id2)
+        public ActionResult DeleteStaffs(string id)
         {
-            Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id2);
+            Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
             businessContext.Staffs.Remove(staff);
             businessContext.SaveChanges();
             return RedirectToAction("Index");

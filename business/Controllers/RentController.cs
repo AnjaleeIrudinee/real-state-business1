@@ -43,7 +43,7 @@ namespace business.Controllers
             Rent rent = businessContext.Rents.SingleOrDefault(x => x.PropertyNo == id);
             ViewBag.OwnerDetails = new SelectList(businessContext.Rents, "OwnerNo_Ref", "OwnerNo_Ref");
             ViewBag.StaffDetails = new SelectList(businessContext.Rents, "StaffNo_Ref", "StaffNo_Ref");
-            ViewBag.BranchDetails = new SelectList(businessContext.Rents, "Branch_Ref", "BranchNo_Ref");
+            ViewBag.BranchDetails = new SelectList(businessContext.Rents, "BranchNo_Ref", "BranchNo_Ref");
             return View(rent);
         }
         [HttpPost]
@@ -67,9 +67,9 @@ namespace business.Controllers
             return View(rent);
         }
         [HttpPost,ActionName("Delete")]
-        public ActionResult DeleteRent(string id1)
+        public ActionResult DeleteRent(string id)
         {
-            Rent rent = businessContext.Rents.SingleOrDefault(x => x.PropertyNo == id1);
+            Rent rent = businessContext.Rents.SingleOrDefault(x => x.PropertyNo == id);
             businessContext.Rents.Remove(rent);
             businessContext.SaveChanges();
             return RedirectToAction("Index");

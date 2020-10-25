@@ -56,9 +56,9 @@ namespace business.Controllers
             Owner owner = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id);
             return View(owner);
         }
-        public ActionResult DeleteOwner(string id2)
+        public ActionResult DeleteOwner(string id)
         {
-            Owner owner = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id2);
+            Owner owner = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id);
             businessContext.Owners.Remove(owner);
             businessContext.SaveChanges();
             return RedirectToAction("Index");

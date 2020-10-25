@@ -133,29 +133,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202010250845215_z1.cs" />
-    <Compile Include="Migrations\202010250845215_z1.Designer.cs">
-      <DependentUpon>202010250845215_z1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010250848292_z2.cs" />
-    <Compile Include="Migrations\202010250848292_z2.Designer.cs">
-      <DependentUpon>202010250848292_z2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010250852450_x1.cs" />
-    <Compile Include="Migrations\202010250852450_x1.Designer.cs">
-      <DependentUpon>202010250852450_x1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010250927276_x2.cs" />
-    <Compile Include="Migrations\202010250927276_x2.Designer.cs">
-      <DependentUpon>202010250927276_x2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010250941002_x3.cs" />
-    <Compile Include="Migrations\202010250941002_x3.Designer.cs">
-      <DependentUpon>202010250941002_x3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010250956004_v2.cs" />
-    <Compile Include="Migrations\202010250956004_v2.Designer.cs">
-      <DependentUpon>202010250956004_v2.cs</DependentUpon>
+    <Compile Include="Migrations\202010251010500_x1.cs" />
+    <Compile Include="Migrations\202010251010500_x1.Designer.cs">
+      <DependentUpon>202010251010500_x1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
@@ -176,26 +156,25 @@
     <Content Include="Views\Home\IndexR.cshtml" />
     <Content Include="Views\Home\IndexS.cshtml" />
     <Content Include="Views\Branch\Create.cshtml" />
-    <Content Include="Views\Branch\Delete.cshtml" />
     <Content Include="Views\Branch\Details.cshtml" />
-    <Content Include="Views\Branch\EditDetails.cshtml" />
     <Content Include="Views\Branch\Index.cshtml" />
-    <Content Include="Views\Owner\Edit.cshtml" />
     <Content Include="Views\Owner\Create.cshtml" />
     <Content Include="Views\Owner\Index.cshtml" />
-    <Content Include="Views\Owner\OwnerDetails.cshtml" />
-    <Content Include="Views\Owner\Delete.cshtml" />
-    <Content Include="Views\Staff\Delete.cshtml" />
-    <Content Include="Views\Staff\Edit.cshtml" />
     <Content Include="Views\Staff\Create.cshtml" />
     <Content Include="Views\Staff\Index.cshtml" />
-    <Content Include="Views\Rent\Delete.cshtml" />
-    <Content Include="Views\Rent\Edit.cshtml" />
     <Content Include="Views\Rent\Details.cshtml" />
     <Content Include="Views\Rent\Create.cshtml" />
     <Content Include="Views\Rent\Index.cshtml" />
     <Content Include="Views\Owner\Details.cshtml" />
     <Content Include="Views\Staff\Details.cshtml" />
+    <Content Include="Views\Branch\Delete.cshtml" />
+    <Content Include="Views\Branch\Edit.cshtml" />
+    <Content Include="Views\Staff\Edit.cshtml" />
+    <Content Include="Views\Staff\Delete.cshtml" />
+    <Content Include="Views\Owner\Edit.cshtml" />
+    <Content Include="Views\Owner\Delete.cshtml" />
+    <Content Include="Views\Rent\Edit.cshtml" />
+    <Content Include="Views\Rent\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,23 +183,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010250845215_z1.resx">
-      <DependentUpon>202010250845215_z1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010250848292_z2.resx">
-      <DependentUpon>202010250848292_z2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010250852450_x1.resx">
-      <DependentUpon>202010250852450_x1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010250927276_x2.resx">
-      <DependentUpon>202010250927276_x2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010250941002_x3.resx">
-      <DependentUpon>202010250941002_x3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010250956004_v2.resx">
-      <DependentUpon>202010250956004_v2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010251010500_x1.resx">
+      <DependentUpon>202010251010500_x1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
